@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { addDataToMap } from "kepler.gl/actions";
 
-import datasetContent from "./data/nyc-subset-csv";
+import datasetContent from "./nyc-subset-csv";
 import keplerConfig from "./kepler-config";
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
         options: { readOnly: true },
       })
     );
-  }, dispatch);
+  }, [dispatch]);
 
   return (
     <div style={{ width: "100%", height: "100vh", margin: 0, padding: 0 }}>
